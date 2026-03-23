@@ -8,10 +8,8 @@ Advanced AI-powered image analysis and digital image processing platform. Vision
 
 - [Overview](#overview)
 - [Key Features](#key-features)
-- [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
 - [Usage](#usage)
 - [DIP Engine Reference](#dip-engine-reference)
 - [Scene Evaluation Metrics](#scene-evaluation-metrics)
@@ -75,24 +73,7 @@ A custom-built client-side Digital Image Processing (DIP) engine then applies th
 
 ---
 
-## Architecture
 
-```
-Browser (Client)
-  |
-  |-- Next.js App (React 19)
-  |     |-- PreviewPanel .............. Image canvas, zoom/pan, histogram, detection overlay, metrics panel
-  |     |-- ControlsPanel ............. Tabbed UI: Vision, AI Edit, Color, Manual
-  |     |-- EditorLayout .............. State management, undo/redo history, DIP pipeline orchestration
-  |     |-- EvaluationPanel ........... Scene understanding metrics dashboard
-  |     |-- EnhancementTools .......... Manual slider controls for all DIP parameters
-  |     `-- DIP Engine ................ Pure JS pixel-level image processing (Canvas API)
-  |
-  |-- Server Actions (Next.js)
-  |     `-- Genkit Flow ............... analyzeAndSuggestImageEnhancementsFlow
-  |
-  `-- Google Gemini 2.5 Flash ........ Multimodal LLM for scene analysis, object detection, grading
-```
 
 All image processing happens client-side. The only server round-trip is the Genkit flow that sends the image to Gemini for analysis and receives structured JSON back.
 
@@ -157,43 +138,6 @@ The application will be available at `http://localhost:9002`.
 | `npm run lint`     | Run ESLint                                    |
 | `npm run typecheck`| Run TypeScript type checking                  |
 | `npm run genkit:dev` | Start the Genkit development UI              |
-
----
-
-## Project Structure
-
-```
-VisionForge/
-  src/
-    ai/
-      genkit.ts ............................. Genkit instance configuration (model, plugins)
-      dev.ts ................................ Genkit development server entry point
-      flows/
-        analyze-and-suggest-image-enhancements-flow.ts
-                                             AI analysis flow with Zod schemas
-    app/
-      layout.tsx ............................ Root layout, fonts, metadata
-      page.tsx .............................. Entry point, renders EditorLayout
-      globals.css ........................... Global styles and CSS custom properties
-    components/
-      VisionForge/
-        AppHeader.tsx ....................... Top navigation bar
-        EditorLayout.tsx .................... Main editor state, undo/redo, pipeline orchestration
-        PreviewPanel.tsx .................... Image canvas, overlays, comparison, export
-        ControlsPanel.tsx ................... Right sidebar with tabbed analysis/edit panels
-        EnhancementTools.tsx ................ Manual adjustment sliders
-        EvaluationPanel.tsx ................. Scene evaluation metrics dashboard
-      ui/ .................................. Radix/shadcn component library
-    hooks/
-      useImageHistogram.ts .................. RGB histogram computation hook
-      use-toast.ts .......................... Toast notification hook
-    lib/
-      dip-engine.ts ......................... Client-side image processing engine (562 lines)
-      scene-evaluation.ts ................... Accuracy, latency, and completeness metrics
-      utils.ts .............................. Utility functions (cn)
-  docs/
-    blueprint.md ............................ Original design specification
-```
 
 ---
 
