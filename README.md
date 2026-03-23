@@ -1,4 +1,4 @@
-# VisionForge
+# Ignite VisionForge
 
 Advanced AI-powered image analysis and digital image processing platform. VisionForge combines Google Gemini's multimodal intelligence with a client-side DIP engine to deliver real-time scene understanding, automated enhancement suggestions, and cinematic color grading — all in the browser.
 
