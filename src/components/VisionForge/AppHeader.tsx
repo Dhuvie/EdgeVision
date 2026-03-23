@@ -13,11 +13,11 @@ export const AppHeader: React.FC = () => {
       <div className="flex items-center gap-6 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-accent" />
-          <span>AI Intelligence Active</span>
+          <span>Digital Image Processing</span>
         </div>
         <div className="flex items-center gap-2">
           <Zap className="w-4 h-4 text-primary" />
-          <span>Gemini Understanding</span>
+          <span>LLM Understanding</span>
         </div>
       </div>
     </header>

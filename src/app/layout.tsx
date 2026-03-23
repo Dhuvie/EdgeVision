@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'VisionForge | Advanced AI Image Analysis & Enhancement',
-  description: 'Intelligent image processing and artistic analysis powered by Gemini 2.5 Flash',
+  description: 'Intelligent image processing and artistic analysis powered by advanced LLM vision',
 };
 
 export default function RootLayout({
