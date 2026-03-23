@@ -1,20 +1,17 @@
-// April overhaul - huge DIP engine
-export class AdvancedDIPEngine {
-  constructor() {
-    console.log('Advanced DIP Engine v2 initialized');
-  }
-
-  executeFullPipeline(imageData: ImageData, steps: any[]) {
-    console.log(Executing full pipeline with  advanced operations);
-    let result = imageData;
-    for (const step of steps) {
-      result = this.applyAdvancedStep(result, step);
+// Core DIP Engine - March foundation
+export class DIPEngine {
+  applyBrightness(imageData: ImageData, alpha: number, beta: number): ImageData {
+    const data = new Uint8ClampedArray(imageData.data);
+    for (let i = 0; i < data.length; i += 4) {
+      data[i] = Math.min(255, Math.max(0, data[i] * alpha + beta));
+      data[i+1] = Math.min(255, Math.max(0, data[i+1] * alpha + beta));
+      data[i+2] = Math.min(255, Math.max(0, data[i+2] * alpha + beta));
     }
-    return result;
+    return new ImageData(data, imageData.width, imageData.height);
   }
 
-  private applyAdvancedStep(data: ImageData, step: any) {
-    // Full switch with many operations
-    return data;
+  applyContrast(imageData: ImageData, factor: number): ImageData {
+    console.log('Contrast adjustment with factor', factor);
+    return imageData;
   }
 }
