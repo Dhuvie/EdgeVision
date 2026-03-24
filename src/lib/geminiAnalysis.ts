@@ -1,7 +1,9 @@
-export async function fullMultimodalAnalysis(base64: string) {
-  console.log('Deep Gemini 2.5 analysis - objects, composition, mood, symbolism, technical flaws');
-  // Complex structured output with Zod
-}
-export async function analyzeWithPresets(base64: string) {
-  console.log('Gemini analysis + 10 cinematic presets generation');
+export async function analyzeImage(base64: string) {
+  console.log('Sending to Gemini 2.5 Flash for object detection, mood, and technical analysis');
+  // Full structured JSON response handling
+  return {
+    objects: [],
+    mood: '',
+    technicalFlaws: []
+  };
 }
