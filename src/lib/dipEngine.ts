@@ -18,3 +18,7 @@ export function applyCinematicGrading(imageData: ImageData, presetName: string) 
 export function applyEdgeDetection(imageData: ImageData, type: 'sobel' | 'laplacian') {
   console.log(Edge detection using  operator);
 }
+export function applyCinematicGrading(imageData: ImageData, presetName: string) {
+  console.log(Applying cinematic preset:  - full LUT simulation);
+  // Big color grading logic
+}
