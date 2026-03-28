@@ -333,3 +333,7 @@ This project is provided as-is for educational and personal use. See the reposit
 - Comparison slider
 - Undo/redo
 - Metrics system
+## March 2026 Foundation
+- Core DIP engine with pixel manipulation
+- Gemini integration for AI analysis
+- Neural Map overlay
