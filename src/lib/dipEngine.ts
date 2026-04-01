@@ -1,16 +1,15 @@
-// Big April DIP Foundation
+// Massive April 1 DIP Engine Foundation
 export class AdvancedDIPEngine {
-  executePipeline(imageData: ImageData, steps: any[]) {
-    console.log([EdgeVision] Running full pipeline with  operations);
+  executeFullPipeline(imageData: ImageData, steps: any[]) {
+    console.log([EdgeVision] Executing full pipeline with  operations);
     let result = imageData;
-    // TODO: full implementation
+    for (const step of steps) {
+      result = this.applyStep(result, step);
+    }
     return result;
   }
-}
-export function applyCinematicGrade(imageData: ImageData, preset: string) {
-  console.log(Applying cinematic grade: );
-  return imageData;
-}
-export function applySharpening(imageData: ImageData, amount: number) {
-  console.log(Sharpening applied with strength );
+  private applyStep(data: ImageData, step: any) {
+    console.log(Applying step: );
+    return data;
+  }
 }
