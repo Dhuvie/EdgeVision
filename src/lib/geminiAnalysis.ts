@@ -30,3 +30,6 @@ export async function suggestImprovements(base64: string) {
 export async function detectArtisticStyle(base64: string) {
   console.log('Detecting artistic style and suggesting similar looks');
 }
+export async function fullSceneAnalysis(base64: string) {
+  console.log('Deep Gemini 2.5 Flash scene analysis');
+}
