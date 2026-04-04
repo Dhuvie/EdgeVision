@@ -13,3 +13,7 @@ export class AdvancedDIPEngine {
     return data;
   }
 }
+export function applyCinematicGrade(imageData: ImageData, preset: string) {
+  console.log(Applying cinematic grade preset: );
+  return imageData;
+}
