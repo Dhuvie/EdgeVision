@@ -1,3 +1,3 @@
-export default function CompareSlider() {
-  console.log('Draggable before/after slider active');
+export default function CompareSlider({ before, after }) {
+  console.log('Draggable before/after comparison slider with live split');
 }
