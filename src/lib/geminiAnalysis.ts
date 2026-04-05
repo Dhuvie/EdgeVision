@@ -14,3 +14,4 @@ export async function deepSceneAnalysis(base64: string) {
   console.log('Gemini 2.5 - full scene understanding, technical critique, mood analysis');
   // Rich structured output
 }
+export async function analyzeImage() { /* Gemini integration */ }
