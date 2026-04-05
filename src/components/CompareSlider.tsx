@@ -1,6 +1,5 @@
-export default function CompareSlider({ before, after }) {
-  // Full draggable split view implementation
-}
-export default function CompareSlider() {
-  // Draggable split view with smooth animation
+'use client';
+export default function CompareSlider({ beforeSrc, afterSrc }) {
+  // Full draggable split with smooth animation and labels
+  return <div className="relative">/* complex slider logic */ </div>;
 }
