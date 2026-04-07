@@ -7,3 +7,6 @@ export async function analyzeImage(base64: string) {
     technicalFlaws: []
   };
 }
+export async function fullAnalysis(base64: string) {
+  console.log('Gemini deep dive - objects, mood, composition');
+}
