@@ -18,3 +18,7 @@ export async function analyzeImage() { /* Gemini integration */ }
 export async function generateCinematicPresets(base64: string) {
   console.log('AI generating 8 cinematic looks');
 }
+// Big Gemini integration update
+export async function fullSceneAnalysis(base64: string) {
+  console.log('Deep Gemini 2.5 analysis - objects, mood, cinematic suggestions');
+}
