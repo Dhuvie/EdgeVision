@@ -17,3 +17,7 @@ export function applyCinematicGrade(imageData: ImageData, preset: string) {
   console.log(Applying cinematic grade preset: );
   return imageData;
 }
+export function applySharpening(imageData: ImageData, amount: number) {
+  console.log(Sharpening filter with strength );
+  return imageData;
+}
