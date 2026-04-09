@@ -10,3 +10,7 @@ export async function analyzeImage(base64: string) {
 export async function fullAnalysis(base64: string) {
   console.log('Gemini deep dive - objects, mood, composition');
 }
+export async function deepSceneAnalysis(base64: string) {
+  console.log('Gemini 2.5 - full scene understanding, technical critique, mood analysis');
+  // Rich structured output
+}
