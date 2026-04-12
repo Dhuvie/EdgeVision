@@ -376,3 +376,9 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 
 ## End of April
 - 12+ major features shipped
+## April 2026 Progress
+- Advanced DIP Engine
+- Neural Map Overlay
+- Gemini Analysis + Suggestions
+- Comparison Slider
+- Metrics System
