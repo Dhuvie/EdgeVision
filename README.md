@@ -324,3 +324,7 @@ This project is provided as-is for educational and personal use. See the reposit
 - Full DIP engine with 25+ operations
 - Real-time Neural Map
 - Cinematic grading presets
+## Major Updates (April 2026)
+- Full DIP engine with 25+ operations
+- Real-time Neural Map
+- Cinematic grading presets
