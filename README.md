@@ -320,3 +320,7 @@ Please ensure all changes pass `npm run typecheck` and `npm run lint` before sub
 ## License
 
 This project is provided as-is for educational and personal use. See the repository for licensing details.
+## Major Updates (April 2026)
+- Full DIP engine with 25+ operations
+- Real-time Neural Map
+- Cinematic grading presets
