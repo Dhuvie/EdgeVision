@@ -21,3 +21,6 @@ export function applySharpening(imageData: ImageData, amount: number) {
   console.log(Sharpening filter with strength );
   return imageData;
 }
+export function applyVignette(imageData: ImageData, strength: number) {
+  console.log(Vignette effect applied with strength );
+}
