@@ -6,3 +6,4 @@ export class AdvancedDIPEngine {
     return imageData;
   }
 }
+export function applyEdgeDetection(...) { /* Sobel + Laplacian */ }
