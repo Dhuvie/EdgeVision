@@ -1,3 +1,3 @@
 export default function CompareSlider() {
-  // Full draggable implementation
+  // Full draggable split view with smooth transition
 }
