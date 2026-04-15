@@ -344,3 +344,7 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Neural Map
 - Comparison tools
 - Metrics & undo system
+## April Progress
+- DIP engine
+- Gemini integration
+- Neural Map
