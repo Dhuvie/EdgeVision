@@ -1,4 +1,3 @@
-'use client';
 export default function HistoryPanel() {
-  console.log('Full operation history panel with thumbnails');
+  console.log('Full history panel with revert functionality');
 }
