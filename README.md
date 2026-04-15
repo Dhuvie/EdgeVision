@@ -368,3 +368,8 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Artistic style detection
 - Sharpening & color tools
 - Shareable reports
+## April 2026 Progress
+- DIP Engine
+- Neural Map
+- Gemini Analysis
+- Comparison Slider
