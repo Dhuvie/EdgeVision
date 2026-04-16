@@ -42,3 +42,6 @@ export async function fullSceneAnalysis(base64: string) {
 export async function suggestImprovements(base64: string) {
   console.log('Gemini suggesting composition and technical improvements');
 }
+export async function detectArtisticStyle(base64: string) {
+  console.log('Detecting artistic style');
+}
