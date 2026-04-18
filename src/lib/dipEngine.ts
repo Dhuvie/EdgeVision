@@ -7,3 +7,8 @@ export class AdvancedDIPEngine {
     return result;
   }
 }
+// Big addition April 18
+export function applyCinematicGrade(imageData: ImageData, preset: string) {
+  console.log(Applying cinematic grade: );
+  return imageData;
+}
