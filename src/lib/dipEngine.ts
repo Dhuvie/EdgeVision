@@ -24,3 +24,6 @@ export function applySharpening(imageData: ImageData, amount: number) {
 export function applyVignette(imageData: ImageData, strength: number) {
   console.log(Vignette effect applied with strength );
 }
+export function applyFilmGrain(imageData: ImageData, intensity: number) {
+  console.log(Film grain simulation with intensity );
+}
