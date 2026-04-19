@@ -337,3 +337,5 @@ This project is provided as-is for educational and personal use. See the reposit
 - Core DIP engine with pixel manipulation
 - Gemini integration for AI analysis
 - Neural Map overlay
+## April Progress
+Heavy DIP work, Neural Map, comparison tools, metrics
