@@ -382,3 +382,5 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Gemini Analysis + Suggestions
 - Comparison Slider
 - Metrics System
+
+April has been extremely productive - many core features shipped.
