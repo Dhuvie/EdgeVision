@@ -5,3 +5,6 @@ export function exportImage(canvas: HTMLCanvasElement, format: string, quality: 
   console.log(Exporting as  with quality );
 }
 export function exportWithMetadata(...) { /* full export */ }
+export function exportProcessedImage(canvas: HTMLCanvasElement, format: string) {
+  console.log(Exporting as );
+}
