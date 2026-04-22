@@ -328,3 +328,8 @@ This project is provided as-is for educational and personal use. See the reposit
 - Full DIP engine with 25+ operations
 - Real-time Neural Map
 - Cinematic grading presets
+## April 2026 Updates
+- Full DIP pipeline
+- Comparison slider
+- Undo/redo
+- Metrics system
