@@ -339,3 +339,8 @@ This project is provided as-is for educational and personal use. See the reposit
 - Neural Map overlay
 ## April Progress
 Heavy DIP work, Neural Map, comparison tools, metrics
+## April 2026 Development Log
+- Heavy DIP pipeline
+- Neural Map
+- Comparison tools
+- Metrics & undo system
