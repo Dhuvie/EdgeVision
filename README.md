@@ -352,3 +352,8 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - DIP engine expansions
 - Export system
 - Performance fixes
+
+## April 2026 Highlights
+- Full DIP pipeline executor
+- Neural Map overlay
+- Gemini cinematic analysis
