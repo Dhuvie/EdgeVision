@@ -373,3 +373,6 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Neural Map
 - Gemini Analysis
 - Comparison Slider
+
+## End of April
+- 12+ major features shipped
