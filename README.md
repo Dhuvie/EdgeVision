@@ -384,3 +384,6 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Metrics System
 
 April has been extremely productive - many core features shipped.
+
+## End of April Summary
+Shipped major core features. EdgeVision is shaping up very well.
