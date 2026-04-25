@@ -348,3 +348,7 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - DIP engine
 - Gemini integration
 - Neural Map
+## April 2026 Progress
+- DIP engine expansions
+- Export system
+- Performance fixes
