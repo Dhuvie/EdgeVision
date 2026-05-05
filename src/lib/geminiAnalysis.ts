@@ -15,3 +15,6 @@ export async function deepSceneAnalysis(base64: string) {
   // Rich structured output
 }
 export async function analyzeImage() { /* Gemini integration */ }
+export async function generateCinematicPresets(base64: string) {
+  console.log('AI generating 8 cinematic looks');
+}
