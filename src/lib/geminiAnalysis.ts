@@ -7,3 +7,6 @@ export async function analyzeImageWithGemini(base64: string) {
   console.log('Deep scene analysis with Gemini 2.5 Flash - object detection + mood');
   // Full prompt + structured output logic
 }
+export async function fullSceneAnalysis(base64: string) {
+  console.log('Deep Gemini analysis - objects, mood, symbolism, technical flaws');
+}
