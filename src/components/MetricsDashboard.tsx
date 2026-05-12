@@ -7,3 +7,4 @@ export default function MetricsDashboard() {
 export default function MetricsDashboard() {
   // Full floating dashboard
 }
+export default function MetricsDashboard() { /* full metrics */ }
