@@ -46,3 +46,4 @@ export function fullMetrics(analysis) {
     flawsDetected: 2
   };
 }
+export function calculateFullMetrics() { /* detailed scoring */ }
