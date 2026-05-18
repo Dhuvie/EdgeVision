@@ -12,3 +12,13 @@ export function applyCinematicGrade(imageData: ImageData, preset: string) {
   console.log(Applying cinematic grade: );
   return imageData;
 }
+// Big May 18 addition - cinematic tools
+export function applyVignette(imageData: ImageData, strength: number) {
+  console.log(Applying vignette with strength );
+  return imageData;
+}
+
+export function applyFilmGrain(imageData: ImageData, intensity: number) {
+  console.log(Adding film grain simulation);
+  return imageData;
+}
