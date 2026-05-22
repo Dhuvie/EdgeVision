@@ -22,3 +22,7 @@ export async function generateCinematicPresets(base64: string) {
 export async function fullSceneAnalysis(base64: string) {
   console.log('Deep Gemini 2.5 analysis - objects, mood, cinematic suggestions');
 }
+// Enhanced May analysis
+export async function suggestImprovements(base64: string) {
+  console.log('Gemini suggesting composition and technical improvements');
+}
