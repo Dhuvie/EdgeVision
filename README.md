@@ -357,3 +357,8 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Full DIP pipeline executor
 - Neural Map overlay
 - Gemini cinematic analysis
+
+## May 2026 Updates
+- Advanced DIP effects (vignette, grain)
+- Preset gallery
+- AI improvement suggestions
