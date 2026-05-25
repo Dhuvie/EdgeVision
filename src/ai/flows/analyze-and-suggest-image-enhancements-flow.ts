@@ -70,11 +70,7 @@ export async function analyzeAndSuggestImageEnhancements(
   return analyzeAndSuggestImageEnhancementsFlow(input);
 }
 
-const analyzeAndSuggestPrompt = ai.definePrompt({
-  name: 'analyzeAndSuggestImageEnhancementsPrompt',
-  input: { schema: AnalyzeAndSuggestImageEnhancementsInputSchema },
-  output: { schema: AnalyzeAndSuggestImageEnhancementsOutputSchema },
-  prompt: `You are an elite Hollywood Colorist and Master Visual Artist. 
+const ANALYSIS_PROMPT_TEXT = `You are an elite Hollywood Colorist and Master Visual Artist. 
 
 Your goal is to transform the input image into a professional masterpiece using Digital Image Processing (DIP).
 
@@ -115,8 +111,42 @@ Include "The Expert Pick" as the definitive balanced master grade.
 Input Image:
 {{media url=photoDataUri}}
 
-Return valid JSON with sophisticated, long technical flaws and professional cinematic looks.`,
+Return valid JSON with sophisticated, long technical flaws and professional cinematic looks.`;
+
+// Primary prompt — uses default model (Gemini 2.5 Flash)
+const analyzeAndSuggestPrompt = ai.definePrompt({
+  name: 'analyzeAndSuggestImageEnhancementsPrompt',
+  input: { schema: AnalyzeAndSuggestImageEnhancementsInputSchema },
+  output: { schema: AnalyzeAndSuggestImageEnhancementsOutputSchema },
+  prompt: ANALYSIS_PROMPT_TEXT,
 });
+
+// Fallback prompt — explicitly uses Gemini 3.0 Flash when 2.5 Flash is overloaded
+const analyzeAndSuggestPromptFallback = ai.definePrompt({
+  name: 'analyzeAndSuggestImageEnhancementsPromptFallback',
+  model: 'googleai/gemini-3-flash-preview',
+  input: { schema: AnalyzeAndSuggestImageEnhancementsInputSchema },
+  output: { schema: AnalyzeAndSuggestImageEnhancementsOutputSchema },
+  prompt: ANALYSIS_PROMPT_TEXT,
+});
+
+const MAX_RETRIES = 2;
+const BASE_DELAY_MS = 2000;
+const MODELS = [
+  { name: 'Gemini 2.5 Flash', fn: analyzeAndSuggestPrompt },
+  { name: 'Gemini 3.0 Flash', fn: analyzeAndSuggestPromptFallback },
+] as const;
+
+function isOverloadError(error: any): boolean {
+  return (
+    error?.code === 'UNAVAILABLE' ||
+    error?.message?.includes('503') ||
+    error?.message?.includes('high demand') ||
+    error?.message?.includes('Service Unavailable') ||
+    error?.message?.includes('overloaded') ||
+    error?.message?.includes('RESOURCE_EXHAUSTED')
+  );
+}
 
 const analyzeAndSuggestImageEnhancementsFlow = ai.defineFlow(
   {
@@ -125,8 +155,27 @@ const analyzeAndSuggestImageEnhancementsFlow = ai.defineFlow(
     outputSchema: AnalyzeAndSuggestImageEnhancementsOutputSchema,
   },
   async (input) => {
-    const {output} = await analyzeAndSuggestPrompt(input);
-    if (!output) throw new Error('Failed to get output from AI prompt.');
-    return output;
+    for (const model of MODELS) {
+      for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+        try {
+          console.log(`[VisionForge] Trying ${model.name} (attempt ${attempt + 1}/${MAX_RETRIES + 1})...`);
+          const { output } = await model.fn(input);
+          if (!output) throw new Error('AI returned empty output.');
+          console.log(`[VisionForge] ✓ Success with ${model.name}`);
+          return output;
+        } catch (error: any) {
+          if (!isOverloadError(error) || (attempt === MAX_RETRIES && model === MODELS[MODELS.length - 1])) {
+            throw error;
+          }
+          if (attempt < MAX_RETRIES) {
+            const delay = BASE_DELAY_MS * Math.pow(2, attempt);
+            console.warn(`[VisionForge] ${model.name} unavailable (attempt ${attempt + 1}). Retrying in ${delay / 1000}s...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+      }
+      console.warn(`[VisionForge] ${model.name} exhausted. Falling back to next model...`);
+    }
+    throw new Error('All AI models exhausted. Please try again later.');
   }
 );
