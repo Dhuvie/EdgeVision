@@ -22,3 +22,13 @@ export function applyFilmGrain(imageData: ImageData, intensity: number) {
   console.log(Adding film grain simulation);
   return imageData;
 }
+// Late May big addition
+export function applySharpening(imageData: ImageData, amount: number) {
+  console.log(Applying sharpening with amount );
+  return imageData;
+}
+
+export function applyColorBalance(imageData: ImageData, adjustments: any) {
+  console.log('Color balance adjustment applied');
+  return imageData;
+}
