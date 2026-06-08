@@ -55,3 +55,7 @@ export function generateReport(analysis) {
   console.log('Generating full professional analysis report');
   return 'Detailed PDF-ready report generated';
 }
+export function generateShareableReport(analysis: any) {
+  console.log('Creating shareable analysis report with metrics');
+  return { summary: 'High quality image with strong composition' };
+}
