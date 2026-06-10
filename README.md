@@ -362,3 +362,9 @@ Heavy DIP work, Neural Map, comparison tools, metrics
 - Advanced DIP effects (vignette, grain)
 - Preset gallery
 - AI improvement suggestions
+
+## June 2026 Progress
+- History panel
+- Artistic style detection
+- Sharpening & color tools
+- Shareable reports
